@@ -95,7 +95,7 @@ $$
 承诺 $C_{f(X)}$ 是群 $\mathbb{G}_1$ 上的一个元素，通过承诺的加法同态映射关系，以及双线性映射关系 $e\in \mathbb{G}_1\times\mathbb{G}_2\to \mathbb{G}_T$，Verifier 可以在 $\mathbb{G}_T$ 上验证整除性关系：
 
 $$
-e(C\_{f(X)} - y[1]_1, [1]_2) \overset{?}{=} e(C\_{q(X)}, [\chi]_2 - \zeta [1]_2)
+e(C_{f(X)} - y[1]_1, [1]_2) \overset{?}{=} e(C_{q(X)}, [\chi]_2 - \zeta [1]_2)
 $$
 
 有时为了减少 Verifier 在 $\mathbb{G}_2$ 上的昂贵操作，上面的验证等式可以变形为：
@@ -105,7 +105,7 @@ f(X) + \zeta\cdot q(X) - y =  q(X)\cdot X
 $$
 
 $$
-e(C\_{f(X)} + \zeta\cdot C\_{q(X)} -y\cdot[1]_1,\ [1]_2)\overset{?}{=} e(C\_{q(X)},\  [\chi]_2)
+e(C_{f(X)} + \zeta\cdot C_{q(X)} -y\cdot[1]_1,\ [1]_2)\overset{?}{=} e(C_{q(X)},\  [\chi]_2)
 $$
 
 ## 同点 Open 的证明聚合
@@ -168,7 +168,7 @@ $$
 
 ### 协议：
 
-公共输入： $C\_{f_1}=[f_1(\chi)]_1$， $C\_{f_2}=[f_2(\chi)]_1$， $\zeta$， $y_1$， $y_2$
+公共输入： $C_{f_1}=[f_1(\chi)]_1$， $C_{f_2}=[f_2(\chi)]_1$， $\zeta$， $y_1$， $y_2$
 
 私有输入： $f_1(X)$， $f_2(X)$
 
@@ -241,7 +241,7 @@ $$
 
 
 
-我们可以进一步优化，比如考虑对于 $f(X) \cdot g(X) = h(X)$ 这样一个简单的多项式约束，Prover 可以减少 Open 的数量。比如 Prover 先 Open $\bar{f} = f(\zeta)$，发送求值证明 $\pi\_{f(\zeta)}$ 然后引入一个辅助多项式 $L(X)= \bar{f}\cdot g(X)-h(X)$，再 Open  $L(X)$ 在 $X=\zeta$ 处的取值。
+我们可以进一步优化，比如考虑对于 $f(X) \cdot g(X) = h(X)$ 这样一个简单的多项式约束，Prover 可以减少 Open 的数量。比如 Prover 先 Open $\bar{f} = f(\zeta)$，发送求值证明 $\pi_{f(\zeta)}$ 然后引入一个辅助多项式 $L(X)= \bar{f}\cdot g(X)-h(X)$，再 Open  $L(X)$ 在 $X=\zeta$ 处的取值。
 
 显然对于一个诚实的 Prover， $L(\zeta)$ 求值应该等于零。对于 Verifier，它在收到 $\bar{f}$ 之后，就可以利用承诺的加法同态性，直接构造 $L(X)$ 的承诺：
 
@@ -263,7 +263,7 @@ $$
 
 ### 协议：
 
-公共输入： $C\_{f_1}=[f_1(\chi)]_1$， $C\_{f_2}=[f_2(\chi)]_1$， $C\_{h_1}=[h_1(\chi)]_1$， $C\_{h_2}=[h_2(\chi)]_1$， $C\_{h_3}=[h_3(\chi)]_1$， $C\_{g}=[g(\chi)]_1$，
+公共输入： $C_{f_1}=[f_1(\chi)]_1$， $C_{f_2}=[f_2(\chi)]_1$， $C_{h_1}=[h_1(\chi)]_1$， $C_{h_2}=[h_2(\chi)]_1$， $C_{h_3}=[h_3(\chi)]_1$， $C_{g}=[g(\chi)]_1$，
 
 私有输入： $f_1(X)$， $f_2(X)$， $h_1(X)$， $h_2(X)$， $h_3(X)$， $g(X)$
 
