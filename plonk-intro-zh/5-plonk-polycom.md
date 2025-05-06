@@ -252,7 +252,7 @@ $$
 这样一来，Verifier 就不需要单独让 Prover 发送 $L(X)$ 的 Opening，也不需要发送新多项式 $L(X)$ 的承诺。Verifier 然后就可以验证 $f(X) \cdot g(X) = h(X)$ 这个多项式约束关系：
 
 $$
-e([L(\chi)]_1, [1]_2)\overset{?}{=} e(\pi\_{L(\zeta)}, [\chi-\zeta]_2)
+e([L(\chi)]_1, [1]_2)\overset{?}{=} e(\pi_{L(\zeta)}, [\chi-\zeta]_2)
 $$
 
 这个优化过后的方案，Prover 只需要 Open 两次。第一个 Opening 为 $\bar{f}$，第二个 Opening 为 $0$。而后者是个常数，不需要发送给 Verifier。Prover 只需要发送两个求值证明，不过我们仍然可以用上一节提供的聚合证明的方法，通过一个挑战数 $\nu$，Prover 可以聚合两个多项式承诺，然后仅需要发送一个求值证明。
